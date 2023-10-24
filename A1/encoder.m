@@ -1,3 +1,5 @@
+getMAE_metric(encoded)
+
 function obj = encoder(video, r, block_width, block_height, n)
     obj = struct();
     obj.video = video;
