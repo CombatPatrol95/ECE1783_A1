@@ -132,3 +132,15 @@ function r = findBestPredictedBlockSAD(obj, referenceBlockList, currentBlockSum)
         end
     end
 end
+
+function writeToFile(obj, filename)
+
+    fid=fopen(filename,'w');
+    if (fid < 0) 
+        error('Could not open the file!');
+    end
+     for i=1:10
+        fwrite(fid,uint16(obj(:,:,i)),'uchar');
+     end
+    fclose(fid);
+end
